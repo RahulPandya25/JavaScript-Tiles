@@ -1,0 +1,35 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+main {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+    "box1 box2 box2"
+    "box1 box3 box3 ";
+}
+
+.box1 {
+  background: lightcoral;
+  grid-area: box1;
+}
+.box2 {
+  background: lightblue;
+  grid-area: box2;
+}
+.box3 {
+  background: lightgreen;
+  grid-area: box3;
+}
