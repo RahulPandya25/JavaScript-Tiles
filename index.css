@@ -1,3 +1,8 @@
+:root {
+  --rowNum: 4;
+  --colNum: 5;
+}
+
 *,
 *::after,
 *::before {
@@ -16,34 +21,23 @@ main {
   height: 100vh;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
-  -ms-grid-rows: 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr;
-      grid-template-areas: "box1 box2 box2" "box1 box3 box3 ";
+  -ms-grid-rows: (1fr)[var];
+      grid-template-rows: repeat(var(--rowNum), 1fr);
+  -ms-grid-columns: (1fr)[var];
+      grid-template-columns: repeat(var(--colNum), 1fr);
 }
 
-.box1 {
-  background: lightcoral;
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 2;
-  -ms-grid-column: 1;
-  grid-area: box1;
+@media only screen and (max-width: 786px) {
+  :root {
+    --rowNum: 4;
+    --colNum: 4;
+  }
 }
 
-.box2 {
-  background: lightblue;
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 2;
-  grid-area: box2;
-}
-
-.box3 {
-  background: lightgreen;
-  -ms-grid-row: 2;
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 2;
-  grid-area: box3;
+@media only screen and (max-width: 425px) {
+  :root {
+    --rowNum: 4;
+    --colNum: 3;
+  }
 }
 /*# sourceMappingURL=index.css.map */
