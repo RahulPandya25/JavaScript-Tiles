@@ -27,6 +27,12 @@ main {
       grid-template-columns: repeat(var(--colNum), 1fr);
 }
 
+main .click {
+  background: lightgreen;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+
 @media only screen and (max-width: 786px) {
   :root {
     --rowNum: 4;

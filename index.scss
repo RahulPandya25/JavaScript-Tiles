@@ -21,6 +21,11 @@ main {
   display: grid;
   grid-template-rows: repeat(var(--rowNum), 1fr);
   grid-template-columns: repeat(var(--colNum), 1fr);
+
+  .click {
+    background: lightgreen;
+    transition: all 0.25s ease-in-out;
+  }
 }
 
 @media only screen and (max-width: 786px) {
