@@ -1,6 +1,6 @@
 var clickThis;
-var rows = 4;
-var columns = 5;
+var rows = 3;
+var columns = 3;
 
 const fillGrid = (x, y, blockSize, color) => {
   const container = document.querySelector("main");
