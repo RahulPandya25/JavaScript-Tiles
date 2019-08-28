@@ -15,22 +15,25 @@ const fillGrid = (x, y, blockSize, color) => {
                 box-sizing: border-box;                                          
                 border: 1px black solid;"
                 
-                onclick=sendRespose(this)>${r}${c}</div>`;
+                onclick=sendRespose(event)>${r}${c}</div>`;
       container.innerHTML += markup;
     }
   }
+
+  // testing
+  clickMe("00");
 };
 
 var sendRespose = function(element) {
-  console.log(element.classList);
-  if (element.classList.contains("00")) console.log("POMPOM");
-  clickMe();
+  console.log(element.target.id);
+  if (element.target.id === clickThis) clickMe(clickThis);
 };
 
-var clickMe = function() {
-  removeClickClass();
+var clickMe = function(oldCLick) {
   clickThis =
     "" + Math.floor(Math.random() * rows) + Math.floor(Math.random() * columns);
+  if (clickThis === oldCLick) clickMe(oldCLick);
+  removeClickClass();
   document.getElementById(clickThis).classList.add("click");
 };
 
