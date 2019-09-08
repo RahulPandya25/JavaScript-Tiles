@@ -1,6 +1,7 @@
 :root {
-  --rowNum: 3;
-  --colNum: 3;
+  --rowNum: 4;
+  --colNum: 5;
+  --click-clr: lightgreen;
 }
 
 *,
@@ -21,29 +22,15 @@ main {
   height: 100vh;
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: (1fr)[var];
-      grid-template-rows: repeat(var(--rowNum), 1fr);
-  -ms-grid-columns: (1fr)[var];
-      grid-template-columns: repeat(var(--colNum), 1fr);
+  -ms-grid-rows: (auto)[var];
+      grid-template-rows: repeat(var(--rowNum), auto);
+  -ms-grid-columns: (auto)[var];
+      grid-template-columns: repeat(var(--colNum), auto);
 }
 
 main .click {
-  background: lightblue;
+  background: var(--click-clr);
   -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
-}
-
-@media only screen and (max-width: 786px) {
-  :root {
-    --rowNum: 4;
-    --colNum: 4;
-  }
-}
-
-@media only screen and (max-width: 425px) {
-  :root {
-    --rowNum: 4;
-    --colNum: 3;
-  }
 }
 /*# sourceMappingURL=index.css.map */

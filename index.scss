@@ -1,9 +1,9 @@
 :root {
-  // --rowNum: 4;
-  // --colNum: 5;
-  //test
-  --rowNum: 3;
-  --colNum: 3;
+  // below var are handled by js, here is the default value
+  --rowNum: 4;
+  --colNum: 5;
+
+  --click-clr: lightgreen;
 }
 
 *,
@@ -22,25 +22,13 @@ body {
 main {
   height: 100vh;
   display: grid;
-  grid-template-rows: repeat(var(--rowNum), 1fr);
-  grid-template-columns: repeat(var(--colNum), 1fr);
+  grid-template-rows: repeat(var(--rowNum), auto);
+  grid-template-columns: repeat(var(--colNum), auto);
 
   .click {
-    background: lightblue;
+    background: var(--click-clr);
     transition: all 0.25s ease-in-out;
   }
 }
 
-@media only screen and (max-width: 786px) {
-  :root {
-    --rowNum: 4;
-    --colNum: 4;
-  }
-}
-
-@media only screen and (max-width: 425px) {
-  :root {
-    --rowNum: 4;
-    --colNum: 3;
-  }
-}
+//media queries are handled in js
