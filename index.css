@@ -28,7 +28,7 @@ main {
 }
 
 main .click {
-  background: lightgreen;
+  background: lightblue;
   -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
 }
