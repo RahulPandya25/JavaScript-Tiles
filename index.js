@@ -44,4 +44,4 @@ var removeClickClass = function() {
   });
 };
 
-fillGrid(rows, columns, 1, "lightgreen");
+fillGrid(rows, columns, 1, "lightblue");
