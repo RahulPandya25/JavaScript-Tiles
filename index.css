@@ -1,7 +1,7 @@
 :root {
   --rowNum: 4;
-  --colNum: 5;
-  --click-clr: lightgreen;
+  --colNum: 4;
+  --click-clr: lightblue;
 }
 
 *,

@@ -1,6 +1,6 @@
 var clickThis;
 var rows = 4;
-var columns = 5;
+var columns = 4;
 
 const fillGrid = (x, y, blockSize, color) => {
   const container = document.querySelector("main");
@@ -63,7 +63,7 @@ var refillGrid = function() {
   fillGrid(rows, columns, 1, "white");
 };
 
-function myFunction(x) {
+var makeResponsive = function(x) {
   if (x.matches) {
     // If media query matches
     // update css/js variables
@@ -72,15 +72,15 @@ function myFunction(x) {
     console.log("if");
   } else {
     // update css/js variables
-    updateGridMatrix(4, 5);
+    updateGridMatrix(4, 4);
     console.log("else");
   }
   // remove old grid and fill new one
   refillGrid();
-}
+};
 
 var x = window.matchMedia("(max-width: 786px)");
-myFunction(x); // Call listener function at run time
-x.addListener(myFunction); // Attach listener function on state changes
+makeResponsive(x); // Call listener function at run time
+x.addListener(makeResponsive); // Attach listener function on state changes
 
 fillGrid(rows, columns, 1, "white");
